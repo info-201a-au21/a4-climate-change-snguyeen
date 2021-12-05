@@ -36,7 +36,11 @@ highest_avg_c02_per_capita_country <- filter(avg_c02_per_capita_by_country,
           c02_per_capita = max(co2_per_capita) %>% 
           select(country)
 #Which country has the highest average C02 per capita?
-lowest_avg_c02_per_capita_country <- filter(avg_c02_per_capita_by_country, 
-                                            lowest == min(avg_c02_per_capita_by_country) %>%
-                                            select(country)
+
+#Third variable: 
+
+
+#Fourth variable:
+
+#Fifth variable: 
 
