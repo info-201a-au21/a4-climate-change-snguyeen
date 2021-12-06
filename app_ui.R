@@ -6,8 +6,19 @@ source("app_server.R")
 intro_tab <- tabPanel(
   "Introduction",
   fluidPage(
-    h1("CO2 Emissions"),
-    p("To be Updated")
+    h1("C02 Emissions Finding Summary"),
+    p("Emissions of carbon dioxide are one of the primary drivers of climate
+   change – and present one of the world’s most pressing challenges. Through aggregating data 
+   to get the average C02 per capital in each country/region listed in the dataset, 
+    we've learned that", highest_avg_c02_per_capita_country, " and", 
+    lowest_avg_c02_per_capita_country, " are the countries with highest and lowest
+    annual prodyction-based emissions of carbon dioxide (measured in tonnes per person) 
+    respectively. ", highest_avg_c02_year, " is the year that has the highest average
+    C02 per capita since 2000. ", highest_cum_c02_location, " is the region with highest 
+    cumulative C02 emission which can be attributed to rapid growth and industrialization.
+    Meanwhile, ", highest_co2_per_GDP_location, "is the region with highest annual 
+    production-based emissions of carbon dioxide (CO2), measured in kilograms per 
+    dollar of GDD.")
   )
 )
 
