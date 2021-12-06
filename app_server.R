@@ -24,7 +24,6 @@ server <- function(input, output) {
   })
 }
 
-
 #First variable: What is the average C02 per capita in each country?
 avg_c02_per_capita_by_country <- c02_dts %>%
   group_by(country) %>%
@@ -32,15 +31,22 @@ avg_c02_per_capita_by_country <- c02_dts %>%
   avg_c02_per_capita_by_country
 
 #Second variable: Which country has the highest average C02 per capita?
-highest_avg_c02_per_capita_country <- filter(avg_c02_per_capita_by_country, 
-          c02_per_capita = max(co2_per_capita) %>% 
-          select(country)
-#Which country has the highest average C02 per capita?
+highest_avg_c02_per_capita_country <- max(avg_c02_per_capita_by_country, na.rm = TRUE) %>%
+  pull(country)
+          
+#Which country has the lowest average C02 per capita?
+lowest_avg_c02_per_capita_country <- filter(avg_c02_per_capita_by_country, 
+      avg_c02_per_capita_by_country == min(avg_c02_per_capita_by_country, na.rm = TRUE)) %>%
+      select(country)
 
-#Third variable: 
+#Third variable: Which year has the highest AVERAGE C02 per capita? (Unsure if syntax is correct)
+highest_c02_per_capita_year <- c02_dts %>%
+  filter(co2_per_capita == max(co2_per_capita, na.rm = T)) %>%
+  pull(year)
+#Fourth variable: Which country has the highest cumulative C02 emission?
+#groupby country, sum cumulative_co2 by country 
 
 
-#Fourth variable:
 
-#Fifth variable: 
+#Fifth variable: Which country has the highest C02 per GDP? 
 
