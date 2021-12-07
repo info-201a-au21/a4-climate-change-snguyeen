@@ -13,10 +13,11 @@ server <- function(input, output) {
   output$CO2emissionsplot <- renderPlotly({
     new_dts <- c02_dts %>%
     select(year, coal_co2_per_capita, cement_co2_per_capita, oil_co2_per_capita)
-    colnames(new_dts) <- c("Year", "C02 Emission per Capita from Coal", "C02 Emission per Capita from Oil",
+    colnames(new_dts) <- c("Year", "CO2 Emission per Capita from Coal", 
+                           "CO2 Emission per Capita from Oil",
                            "CO2 Emission per Capita from Cement")
     plot1 <- ggplot(data = new_dts) + 
-      geom_point(mapping = aes(x = Year, y = !!as.name(input$y_axis_input)), col = input$radioinput)
+    geom_point(mapping = aes(x = Year, y = !!as.name(input$y_axis_input)), col = input$radioinput)
     
     plotly_plot <- ggplotly(plot1)
     

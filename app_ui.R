@@ -18,7 +18,7 @@ intro_tab <- tabPanel(
     cumulative C02 emission which can be attributed to rapid growth and industrialization.
     Meanwhile, ", highest_co2_per_GDP_location, "is the region with highest annual 
     production-based emissions of carbon dioxide (CO2), measured in kilograms per 
-    dollar of GDD.")
+    dollar of GDP overall.")
   )
 )
 
@@ -47,7 +47,9 @@ plot_tab <- tabPanel(
     inputId = "radioinput", 
     label = "Color Options", 
     choices = list("Red" , "Blue", "Green")),
-  p("To be Updated")
+  p("Coal, oil, and cement are some of the main sources of carbon dioxide emissions. 
+    This graph demonstrates the  difference in CO2 emissions per capita from each 
+    of the aforementioned sources. ")
 )
 
 ui <- navbarPage(
