@@ -49,7 +49,9 @@ plot_tab <- tabPanel(
     choices = list("Red" , "Blue", "Green")),
   p("Coal, oil, and cement are some of the main sources of carbon dioxide emissions. 
     This graph demonstrates the  difference in CO2 emissions per capita from each 
-    of the aforementioned sources. ")
+    of the aforementioned sources. From the graphs, we see a drastic increase in 
+    the amount of CO2 emissions from these sources from 1800. Out of the three sources, 
+    coal seems like the biggest contributor to the carbon dioxide emissions in the world.")
 )
 
 ui <- navbarPage(
